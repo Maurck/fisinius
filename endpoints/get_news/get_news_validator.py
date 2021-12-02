@@ -16,7 +16,11 @@ get_news_query_schema = {
         "max": 255,
         "required": False,
         "default": 0
-    } 
+    },
+    "category": {
+        "type": "string",
+        "required": False
+    }
 }
 
 class GetNewsValidator:
