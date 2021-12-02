@@ -1,9 +1,26 @@
 from utils.utils import validate_parameters
 
-get_news_body_schema = {}
+get_news_query_schema = {
+    "from": {
+        "type": "integer",
+        'coerce': int,
+        "min": 0,
+        "max": 255,
+        "required": False,
+        "default": 0
+    },
+    "limit": {
+        "type": "integer",
+        'coerce': int,
+        "min": 0,
+        "max": 255,
+        "required": False,
+        "default": 0
+    } 
+}
 
 class GetNewsValidator:
 
     def __call__(self, request):
-        body_validation_errors = validate_parameters(request.form, get_news_body_schema)
+        body_validation_errors = validate_parameters(request.form, get_news_query_schema)
         return body_validation_errors

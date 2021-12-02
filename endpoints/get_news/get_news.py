@@ -12,6 +12,6 @@ class GetNews:
             return get_news_validation_errors
 
         get_news_flow = GetNewsFlow()
-        return get_news_flow()
+        return get_news_flow(request)
 
             
