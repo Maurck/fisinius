@@ -15,11 +15,21 @@ class News(Document):
     image_url = StringField(required=True, default='')
     category = StringField(required=True, default='')
 
-    def to_json(self):
+    def to_news_json(self):
         news_dict = {
             "news_id": str(self.pk),
             "title": self.title,
-            "body": self.body,
+            "abstract": self.abstract,
+            "image_url": self.image_url,
+            "category": self.category
+        }
+        return news_dict
+
+    def to_article_json(self):
+
+        article_dict = {
+            "news_id": str(self.pk),
+            "title": self.title,
             "abstract": self.abstract,
             "uri": self.uri,
             "source": self.source,
@@ -28,4 +38,4 @@ class News(Document):
             "image_url": self.image_url,
             "category": self.category
         }
-        return news_dict
+        return article_dict
