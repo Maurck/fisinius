@@ -31,6 +31,7 @@ class News(Document):
             "news_id": str(self.pk),
             "title": self.title,
             "abstract": self.abstract,
+            "body": self.body,
             "uri": self.uri,
             "source": self.source,
             "authors_names": self.authors_names,
