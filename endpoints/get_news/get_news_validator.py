@@ -22,5 +22,5 @@ get_news_query_schema = {
 class GetNewsValidator:
 
     def __call__(self, request):
-        body_validation_errors = validate_parameters(request.form, get_news_query_schema)
+        body_validation_errors = validate_parameters(request.args.copy(), get_news_query_schema)
         return body_validation_errors
