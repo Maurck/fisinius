@@ -5,7 +5,7 @@ get_news_query_schema = {
         "type": "integer",
         'coerce': int,
         "min": 0,
-        "max": 255,
+        "max": 10000,
         "required": False,
         "default": 0
     },
@@ -13,7 +13,7 @@ get_news_query_schema = {
         "type": "integer",
         'coerce': int,
         "min": 0,
-        "max": 255,
+        "max": 10000,
         "required": False,
         "default": 0
     },
